@@ -1,0 +1,53 @@
+﻿@using EntityLayer.Concrete
+@model List<Destination>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Tur Rotaları</h1>
+
+<table class="table table-bordered text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Şehir</th>
+            <th>Fiyat</th>
+            <th>Kapasite</th>
+            <th>Sitede Gör</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DestinationID</td>
+                <td>@item.City</td>
+                <td>@item.Price.ToString("C0")</td>
+                <td>@item.Capacity</td>
+                <td>
+                    <a href="@Url.Action("DestinationDetails", "Destination", new { id = item.DestinationID })" class="btn btn-outline-info">
+                        <i class="fa fa-eye"></i> Sitede Gör
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action("DeleteDestination", "Destination", new { area = "Admin", id = item.DestinationID })" class="btn btn-outline-danger" onclick="return confirm('Bu rotayı silmek istediğinize emin misiniz?');">
+                        <i class="fa fa-trash"></i> Sil
+                    </a>
+                </td>
+
+                <td>
+                    <a href="@Url.Action("UpdateDestination", "Destination", new { area = "Admin", id = item.DestinationID })" class="btn btn-outline-success">
+                        <i class="fa fa-edit"></i> Güncelle
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Admin/Destination/AddDestination" class="btn btn-outline-primary">Yeni Tur Rotası</a>

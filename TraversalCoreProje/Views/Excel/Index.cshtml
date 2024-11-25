@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Sayfa Başlığı -->
+<div class="text-center my-5">
+    <h1 class="display-4 text-success">Excel Raporlar Sayfası</h1>
+    <p class="lead text-muted">Aşağıdaki seçeneklerden uygun Excel raporlarını indirebilirsiniz.</p>
+</div>
+
+<!-- Rapor Butonları -->
+<div class="d-flex justify-content-center gap-4">
+    <a href="/Excel/StaticExcelReport/" class="btn btn-lg btn-outline-info shadow-sm report-btn">Statik Excel Raporu</a>
+    <a href="/Excel/DestinationExcelReport/" class="btn btn-lg btn-outline-primary shadow-sm report-btn">Tur Rotaları Excel Raporu</a>
+</div>
+
+<!-- Stil Düzenlemeleri -->
+<style>
+    h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    .btn {
+        transition: all 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .report-btn {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    /* Butonlar üzerine hover efekti */
+    .btn-outline-info:hover {
+        background-color: #17a2b8;
+        color: #fff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>

@@ -1,0 +1,113 @@
+﻿@model EntityLayer.Concrete.Destination
+@{
+    ViewData["Title"] = "DestinationDetails";
+    Layout = "~/Views/Shared/_UlLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="zxx">
+
+<body>
+    <!-- about breadcrumb -->
+    <section class="w3l-about-breadcrumb text-left">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+            <div class="container">
+                <h2 class="title">Tur Detayları</h2>
+                <ul class="breadcrumbs-custom-path mt-2">
+                    <li><a href="/Default/Index/">Ana Sayfa</a></li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Rehberin Yorumları</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //about breadcrumb -->
+    <!--/blog-->
+    <div class="py-5 w3l-homeblock1 text-center">
+        <div class="container mt-md-3">
+            <h3 class="blog-desc-big text-center mb-4">
+                Alanında en yetkin rehberlerimizle en güncel seyahat hikayelerimizi okumalısınız!
+            </h3>
+            <div class="blog-post-align">
+                <div class="blog-post-img">
+                    <a href="#"><img src="@Url.Content("~/Traversal-Liberty/assets/images/banner1.jpg")" alt="Profil Resmi" class="rounded-circle img-fluid" /></a>
+                </div>
+                <div class="blog-post-info">
+                    <div class="author align-items-center mb-1">
+                        <a href="#">HİLMİ SÜHEYL KÖROĞLU</a> Tur Rotaları: <a href="#url">Traversal</a>
+                    </div>
+                    <ul class="blog-meta">
+                        <li class="meta-item blog-lesson">
+                            <span class="meta-value"> June 01, 2005 </span>
+                        </li>
+                        <li class="meta-item blog-students">
+                            <span class="meta-value"> 6min read</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="blog-post-main w3l-homeblock1">
+        <!--/blog-post-->
+        <div class="blog-content-inf pb-5">
+            <div class="container pb-lg-4">
+                <div class="single-post-image">
+                    <div class="post-content">
+                        <img src="@Url.Content("~/Traversal-Liberty/assets/images/banner1.jpg")" style="width:1170px;height:500px" class="radius-image img-fluid mb-5" alt="" />
+                    </div>
+                </div>
+                <div class="single-post-content">
+                    <p class="alphabet mb-4">
+                        <span class="big-letter"></span>
+                        Tatiller, yaşamımızın vazgeçilmez bir parçasıdır. Yıl boyunca çalışarak, okula giderek veya çeşitli sorumluluklarla yoğun bir şekilde meşgul olarak geçirdiğimiz zamanların ardından, kısa bir mola almak hem bedensel hem de zihinsel sağlığımız için önemlidir.
+                    </p>
+                    <blockquote class="blockquote my-5">
+                        <div class="icon-quote"><span class="fa fa-quote-left" aria-hidden="true"></span></div>
+                        Gezi Tur Seyahat Rotalar Dünya.
+                        <footer class="blockquote-footer mt-3">Smith Lara</footer>
+                    </blockquote>
+
+                    <div class="sing-post-thumb mb-5 row pt-3">
+                        <div class="col-sm-6">
+                            <a href="#url"><img src="@Url.Content("~/Traversal-Liberty/assets/images/banner2.jpg")" style="width:400px;height:400px;" class="img-fluid radius-image" alt=""></a>
+                        </div>
+                        <div class="col-sm-6 mt-sm-0 mt-3">
+                            <a href="#url"><img src="@Url.Content("~/Traversal-Liberty/assets/images/banner3.jpg")" style="width:400px;height:400px;" class="img-fluid radius-image" alt=""></a>
+                        </div>
+                    </div>
+
+                    <h3 class="blog-desc-big m-0 mb-lg-4 mb-3">2. Paragraf</h3>
+                    <p class="mb-4">
+                        Bir genel tatil, çalıştığınız yerin veya okulun belirli bir gün veya hafta boyunca kapalı olması anlamına gelir. Bu tür tatillerde, insanlar günlük işlerinin ve sorumluluklarının dışına çıkarak kendilerine vakit ayırabilirler.
+                    </p>
+
+                    <div class="d-grid left-right mt-5 pb-md-5">
+                        <div class="buttons-singles tags">
+                            <h4>Etiketler :</h4>
+                            <a href="#blog-tag">Seyahat</a>
+                            <a href="#blog-tag">Gezi</a>
+                            <a href="#blog-tag">Hotel</a>
+                            <a href="#blog-tag">Yemek</a>
+                            <a href="#blog-tag">Tur</a>
+                            <a href="#blog-tag">Dünya</a>
+                        </div>
+                        <div class="buttons-singles">
+                            <h4>Paylaş :</h4>
+                            <a href="#blog-share"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <a href="#blog-share"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                            <a href="#blog-share"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                            <a href="#blog-share"><span class="fa fa-pinterest-p" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+
+                    <!-- Yorumlar ve Yorum Ekle -->
+                    @await Component.InvokeAsync("_CommentList", new { id = ViewBag.i ?? 0 }) <!-- Varsayılan bir id atanabilir -->
+                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml", new { id = ViewBag.destID ?? 0 }) <!-- Varsayılan bir id atanabilir -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

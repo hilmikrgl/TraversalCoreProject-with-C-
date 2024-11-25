@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Sayfa Başlığı -->
+<div class="text-center my-5">
+    <h2 class="display-4 text-primary">PDF Raporları Sayfası</h2>
+    <p class="lead text-muted">Aşağıdaki seçeneklerden uygun raporu indirebilirsiniz.</p>
+</div>
+
+<!-- Rapor Butonları -->
+<div class="d-flex justify-content-center gap-4">
+    <a href="/PdfReport/StaticPdfReport" class="btn btn-lg btn-outline-primary shadow-sm">Statik PDF Raporu</a>
+    <a href="/PdfReport/StaticCustomerReport" class="btn btn-lg btn-outline-warning shadow-sm">Statik Misafir Raporu</a>
+</div>
+
+<!-- Stil Düzenlemeleri -->
+<style>
+    h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    .btn {
+        transition: all 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+</style>

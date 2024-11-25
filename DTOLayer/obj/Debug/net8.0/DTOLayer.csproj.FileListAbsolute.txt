@@ -1,0 +1,11 @@
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\bin\Debug\net8.0\DTOLayer.deps.json
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\bin\Debug\net8.0\DTOLayer.dll
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\bin\Debug\net8.0\DTOLayer.pdb
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.AssemblyInfoInputs.cache
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.AssemblyInfo.cs
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.dll
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\refint\DTOLayer.dll
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\DTOLayer.pdb
+C:\Users\HİLMİ\OneDrive\Masaüstü\MVC,\TraversalCoreProje\DTOLayer\obj\Debug\net8.0\ref\DTOLayer.dll

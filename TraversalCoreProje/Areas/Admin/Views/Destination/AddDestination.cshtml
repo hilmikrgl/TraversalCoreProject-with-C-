@@ -1,0 +1,56 @@
+﻿@model EntityLayer.Concrete.Destination
+@{
+    ViewData["Title"] = "Yeni Rota Oluştur";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="mb-4">Yeni Rota Oluşturma Sayfası</h1>
+
+<form method="post" class="p-4 border rounded bg-light shadow-sm">
+    <div class="form-group mb-3">
+        @Html.Label("City", "Şehir", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="text" asp-for="City" class="form-control" placeholder="Şehir giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("DayNight", "Gün Gece", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="text" asp-for="DayNight" class="form-control" placeholder="Örneğin: 7 Gün 6 Gece" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Price", "Fiyat", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="number" asp-for="Price" class="form-control" placeholder="Fiyat giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Image", "Ana Görsel URL", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="url" asp-for="Image" class="form-control" placeholder="Ana görsel URL'si giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Capacity", "Kapasite", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="number" asp-for="Capacity" class="form-control" placeholder="Kapasite giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("CoverImage", "Kapak Görseli URL", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="url" asp-for="CoverImage" class="form-control" placeholder="Kapak görsel URL'si giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Image2", "Görsel 2 URL", htmlAttributes: new { @class = "form-label fw-bold" })
+        <input type="url" asp-for="Image2" class="form-control" placeholder="İkinci görsel URL'si giriniz" />
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Details1", "Detay 1", htmlAttributes: new { @class = "form-label fw-bold" })
+        <textarea asp-for="Details1" class="form-control" rows="5" placeholder="Detay 1 giriniz"></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        @Html.Label("Details2", "Detay 2", htmlAttributes: new { @class = "form-label fw-bold" })
+        <textarea asp-for="Details2" class="form-control" rows="5" placeholder="Detay 2 giriniz"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 mt-3">Rota Oluştur</button>
+</form>

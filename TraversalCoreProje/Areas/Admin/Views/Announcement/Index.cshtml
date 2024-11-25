@@ -1,0 +1,59 @@
+﻿@model List<DTOLayer.DTOs.AnnouncementDTOs.AnnouncementListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Duyuru Listesi</h3>
+        </div>
+        <div class="card-body p-4">
+            <table class="table table-hover table-striped align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>İçerik</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                        <th>Detaylar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AnnouncementID</td>
+                            <td>@item.Title</td>
+                            <td>@item.Content</td>
+                            <td>
+                                <a href="/Admin/Announcement/DeleteAnnouncement/@item.AnnouncementID"
+                                   class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-trash"></i> Sil
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/Admin/Announcement/UpdateAnnouncement/@item.AnnouncementID"
+                                   class="btn btn-outline-success btn-sm">
+                                    <i class="bi bi-pencil-square"></i> Güncelle
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-outline-dark btn-sm">
+                                    <i class="bi bi-eye"></i> Detaylar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="text-end">
+                <a href="/Admin/Announcement/AddAnnouncement/" class="btn btn-outline-info px-4">
+                    <i class="bi bi-plus-circle"></i> Yeni Duyuru Girişi
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
